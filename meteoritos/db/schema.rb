@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808095940) do
+ActiveRecord::Schema.define(version: 20160808113031) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -63,6 +63,30 @@ ActiveRecord::Schema.define(version: 20160808095940) do
     t.string   "code"
     t.float    "lat"
     t.float    "lon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mclasses", force: :cascade do |t|
+    t.integer  "mtype_id"
+    t.string   "mclass"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "mclasses", ["mtype_id"], name: "index_mclasses_on_mtype_id"
+
+  create_table "mgroups", force: :cascade do |t|
+    t.integer  "mclass_id"
+    t.string   "mgroup"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "mgroups", ["mclass_id"], name: "index_mgroups_on_mclass_id"
+
+  create_table "mtypes", force: :cascade do |t|
+    t.string   "mtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
