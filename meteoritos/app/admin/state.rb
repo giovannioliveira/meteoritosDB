@@ -1,7 +1,7 @@
 require 'util'
 
 ActiveAdmin.register State do
-
+  menu parent: 'loc', priority: 1
   actions :all
   permit_params :country_id, :name, :code, :lat, :lon
 
