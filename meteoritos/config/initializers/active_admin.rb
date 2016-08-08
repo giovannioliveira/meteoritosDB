@@ -43,6 +43,7 @@ ActiveAdmin.setup do |config|
     admin.build_menu do |menu|
       #TODO i18n
       menu.add id: 'loc', label: "Locations", priority: 0
+      menu.add id: 'cls', label: "Classification", priority: 1
     end
   end
   #
