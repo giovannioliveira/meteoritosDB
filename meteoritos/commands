@@ -1,6 +1,0 @@
-bin/rails s
-
-bin/rails generate controller <name> <action> (eg: bin/rails generate controller welcome index)
-    app/views/<name>/<action>.html.erb (eg: app/views/<name>/<action>.html.erb)
-
-config/routes.rb
