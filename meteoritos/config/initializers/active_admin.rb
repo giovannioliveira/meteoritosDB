@@ -42,8 +42,10 @@ ActiveAdmin.setup do |config|
   config.namespace :admin do |admin|
     admin.build_menu do |menu|
       #TODO i18n
-      menu.add id: 'loc', label: "Locations", priority: 0
-      menu.add id: 'cls', label: "Classification", priority: 1
+      menu.add id: 'met', label: "Meteorites", priority: 1
+      menu.add id: 'loc', label: "Locations", priority: 2
+      menu.add id: 'cls', label: "Classification", priority: 3
+
     end
   end
   #

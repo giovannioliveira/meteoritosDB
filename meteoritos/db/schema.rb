@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808113031) do
+ActiveRecord::Schema.define(version: 20161001041157) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -46,6 +46,36 @@ ActiveRecord::Schema.define(version: 20160808113031) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "analyses", force: :cascade do |t|
+    t.integer  "meteorite_id"
+    t.integer  "bibref_id"
+    t.string   "info"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "analyses", ["bibref_id"], name: "index_analyses_on_bibref_id"
+  add_index "analyses", ["meteorite_id"], name: "index_analyses_on_meteorite_id"
+
+  create_table "bibref_mets", force: :cascade do |t|
+    t.integer  "bibref_id"
+    t.integer  "met_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bibref_mets", ["bibref_id"], name: "index_bibref_mets_on_bibref_id"
+  add_index "bibref_mets", ["met_id"], name: "index_bibref_mets_on_met_id"
+
+  create_table "bibrefs", force: :cascade do |t|
+    t.string   "author"
+    t.string   "publication"
+    t.integer  "year"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.string   "code"
@@ -67,6 +97,16 @@ ActiveRecord::Schema.define(version: 20160808113031) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "elem_analyses", force: :cascade do |t|
+    t.integer  "analysis_id"
+    t.string   "elem"
+    t.float    "val"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "elem_analyses", ["analysis_id"], name: "index_elem_analyses_on_analysis_id"
+
   create_table "mclasses", force: :cascade do |t|
     t.integer  "mtype_id"
     t.string   "mclass"
@@ -75,6 +115,30 @@ ActiveRecord::Schema.define(version: 20160808113031) do
   end
 
   add_index "mclasses", ["mtype_id"], name: "index_mclasses_on_mtype_id"
+
+  create_table "meteorites", force: :cascade do |t|
+    t.string   "cod"
+    t.string   "extcod"
+    t.string   "name"
+    t.string   "synonyms"
+    t.date     "fall_date"
+    t.boolean  "observed"
+    t.integer  "mgroup_id"
+    t.integer  "country_id"
+    t.integer  "state_id"
+    t.integer  "city_id"
+    t.float    "mass"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "meteorites", ["city_id"], name: "index_meteorites_on_city_id"
+  add_index "meteorites", ["country_id"], name: "index_meteorites_on_country_id"
+  add_index "meteorites", ["mgroup_id"], name: "index_meteorites_on_mgroup_id"
+  add_index "meteorites", ["state_id"], name: "index_meteorites_on_state_id"
 
   create_table "mgroups", force: :cascade do |t|
     t.integer  "mclass_id"

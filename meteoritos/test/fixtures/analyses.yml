@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meteorite_id: 
+  bibref_id: 
+  info: MyString
+
+two:
+  meteorite_id: 
+  bibref_id: 
+  info: MyString

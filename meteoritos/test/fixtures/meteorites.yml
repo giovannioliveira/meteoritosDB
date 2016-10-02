@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cod: MyString
+  extcod: MyString
+  name: MyString
+  synonyms: MyString
+  fall_date: 2016-09-11
+  observed: false
+  group_id: 
+  country_id: 
+  state_id: 
+  city_id: 
+  mass: 1.5
+  lat: 1.5
+  lon: 1.5
+  info: MyString
+
+two:
+  cod: MyString
+  extcod: MyString
+  name: MyString
+  synonyms: MyString
+  fall_date: 2016-09-11
+  observed: false
+  group_id: 
+  country_id: 
+  state_id: 
+  city_id: 
+  mass: 1.5
+  lat: 1.5
+  lon: 1.5
+  info: MyString
