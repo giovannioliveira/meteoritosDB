@@ -15,5 +15,5 @@ def import_csv(file_name,cls)
   end
 end
 
-#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 import_csv('db/classif.csv',Classification)

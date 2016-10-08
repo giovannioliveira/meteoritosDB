@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008174256) do
+ActiveRecord::Schema.define(version: 20161008180829) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 20161008174256) do
     t.string "mclass"
     t.string "mclan"
     t.string "mgroup"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string  "country_code"
+    t.string  "name"
+    t.decimal "latitude"
+    t.decimal "longitude"
   end
 
 end
