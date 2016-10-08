@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mtype: MyString
+  mcategory: MyString
+  mclass: MyString
+  mclan: MyString
+  mgroup: MyString
+  mpetrologic_type: MyString
+
+two:
+  mtype: MyString
+  mcategory: MyString
+  mclass: MyString
+  mclan: MyString
+  mgroup: MyString
+  mpetrologic_type: MyString

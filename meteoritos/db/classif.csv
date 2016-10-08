@@ -1,0 +1,47 @@
+mtype,mcategory,mclass,mclan,mgroup
+Stony,Chrondrite,,,R
+Stony,Chrondrite,,,K
+Stony,Chrondrite,Carbonaceous,CI,CI
+Stony,Chrondrite,Carbonaceous,CM-CO,CM
+Stony,Chrondrite,Carbonaceous,CM-CO,CO
+Stony,Chrondrite,Carbonaceous,CV-CK,CV 
+Stony,Chrondrite,Carbonaceous,CV-CK,CK
+Stony,Chrondrite,Carbonaceous,CR,CR
+Stony,Chrondrite,Carbonaceous,CR,CH
+Stony,Chrondrite,Carbonaceous,CR,CB
+Stony,Chrondrite,Ordinary,H-L-LL,H
+Stony,Chrondrite,Ordinary,H-L-LL,L
+Stony,Chrondrite,Ordinary,H-L-LL,LL
+Stony,Chrondrite,Enstatite,EH-EL,EH
+Stony,Chrondrite,Enstatite,EH-EL,EL
+Stony,Primitive Achondrite,,,URE
+Stony,Primitive Achondrite,,,BRA
+Stony,Primitive Achondrite,,ACA-LOD,ACA
+Stony,Primitive Achondrite,,ACA-LOD,LOD
+Stony,Primitive Achondrite,,WIN-IAB-IICD,WIN
+Iron,Primitive Achondrite,,WIN-IAB-IICD,IAB
+Iron,Primitive Achondrite,,WIN-IAB-IICD,IIICD
+Stony,Achondrites,,,ANG
+Stony,Achondrites,,,AUB
+Iron,Achondrites,,,IC
+Iron,Achondrites,,,IIAB
+Iron,Achondrites,,,IIC
+Iron,Achondrites,,,IID
+Iron,Achondrites,,,IIE
+Iron,Achondrites,,,IIIAB
+Iron,Achondrites,,,IIIE
+Iron,Achondrites,,,IIIF
+Iron,Achondrites,,,IVA
+Iron,Achondrites,,,IVB
+Stony,Achondrites,,VESTA?,EUC
+Stony,Achondrites,,VESTA?,DIO
+Stony,Achondrites,,VESTA?,HOW
+Stony,Achondrites,,MARS,SHE
+Stony,Achondrites,,MARS,NAK
+Stony,Achondrites,,MARS,CHA
+Stony,Achondrites,,MARS,OPX
+Stony,Achondrites,,MOON,MOON
+Stony-Iron,Achondrites,,,MG PAL
+Stony-Iron,Achondrites,,,ES PAL
+Stony-Iron,Achondrites,,,PP PAL
+Stony-Iron,Achondrites,,,MES

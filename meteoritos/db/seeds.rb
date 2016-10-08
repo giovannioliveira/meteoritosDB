@@ -5,4 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+require 'csv'
+
+def import_csv(file_name,cls)
+  csv_text = File.read(file_name)
+  csv = CSV.parse(csv_text, :headers => true)
+  csv.each do |row|
+    cls.create!(row.to_hash)
+  end
+end
+
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+import_csv('db/classif.csv',Classification)
