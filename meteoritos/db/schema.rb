@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008180829) do
+ActiveRecord::Schema.define(version: 20161008185545) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -60,5 +60,22 @@ ActiveRecord::Schema.define(version: 20161008180829) do
     t.decimal "latitude"
     t.decimal "longitude"
   end
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "name"
+    t.string   "institution"
+    t.string   "department"
+    t.string   "role"
+    t.string   "address"
+    t.integer  "location_id"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "parties", ["location_id"], name: "index_parties_on_location_id"
 
 end
