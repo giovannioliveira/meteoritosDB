@@ -15,5 +15,18 @@ def import_csv(file_name,cls)
   end
 end
 
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
-import_csv('db/classif.csv',Classification)
+def import_sql(filename)
+  connection = ActiveRecord::Base.connection
+  sql = File.read(filename)
+  statements = sql.split(/;$/)
+  statements.pop
+  ActiveRecord::Base.transaction do
+    statements.each do |statement|
+      connection.execute(statement)
+    end
+  end
+end
+
+#AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+#import_csv('db/classif.csv',Classification)
+import_sql('db/locat.sql')
