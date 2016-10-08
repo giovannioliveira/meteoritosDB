@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  altcode: MyString
+  name: MyString
+  altname: MyString
+  classification_id: 
+  mass: 1.5
+  fall: false
+  event_date: 2016-10-08
+  location_id: 
+  latitude: 9.99
+  longitude: 9.99
+  url: MyString
+  notes: MyText
+
+two:
+  code: MyString
+  altcode: MyString
+  name: MyString
+  altname: MyString
+  classification_id: 
+  mass: 1.5
+  fall: false
+  event_date: 2016-10-08
+  location_id: 
+  latitude: 9.99
+  longitude: 9.99
+  url: MyString
+  notes: MyText
