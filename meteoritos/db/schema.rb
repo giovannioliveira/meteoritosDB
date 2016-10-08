@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008222812) do
+ActiveRecord::Schema.define(version: 20161008223925) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -86,6 +86,23 @@ ActiveRecord::Schema.define(version: 20161008222812) do
   end
 
   add_index "element_analysis", ["analysis_id"], name: "index_element_analysis_on_analysis_id"
+
+  create_table "images", force: :cascade do |t|
+    t.string   "title"
+    t.string   "image_type"
+    t.integer  "meteorite_id"
+    t.integer  "specimen_id"
+    t.binary   "image"
+    t.string   "description"
+    t.integer  "citation_id"
+    t.string   "tags"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "images", ["citation_id"], name: "index_images_on_citation_id"
+  add_index "images", ["meteorite_id"], name: "index_images_on_meteorite_id"
+  add_index "images", ["specimen_id"], name: "index_images_on_specimen_id"
 
   create_table "locations", force: :cascade do |t|
     t.string  "country_code"

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image_type: MyString
+  meteorite_id: 
+  specimen_id: 
+  image: 
+  citation_id: 
+  tags: MyString
+
+two:
+  title: MyString
+  image_type: MyString
+  meteorite_id: 
+  specimen_id: 
+  image: 
+  citation_id: 
+  tags: MyString
