@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  specimen_id: 
+  code: MyString
+  transaction_type: MyString
+  transaction_date: 2016-10-08
+  mass_balance: 9.99
+  party_id: 
+  counterparty_id: 
+  description: MyString
+  transaction_status: MyString
+
+two:
+  specimen_id: 
+  code: MyString
+  transaction_type: MyString
+  transaction_date: 2016-10-08
+  mass_balance: 9.99
+  party_id: 
+  counterparty_id: 
+  description: MyString
+  transaction_status: MyString
