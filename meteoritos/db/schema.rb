@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008210042) do
+ActiveRecord::Schema.define(version: 20161008215150) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -131,5 +131,20 @@ ActiveRecord::Schema.define(version: 20161008210042) do
   end
 
   add_index "parties", ["location_id"], name: "index_parties_on_location_id"
+
+  create_table "specimen", force: :cascade do |t|
+    t.integer  "meteorite_id"
+    t.string   "code"
+    t.boolean  "active"
+    t.boolean  "type_specimen"
+    t.string   "accession"
+    t.string   "initial_mass"
+    t.text     "description"
+    t.text     "notes"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "specimen", ["meteorite_id"], name: "index_specimen_on_meteorite_id"
 
 end
