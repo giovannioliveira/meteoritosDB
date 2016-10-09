@@ -12,6 +12,16 @@ ActiveAdmin.register ElementAnalysis do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  permit_params :analysis,:element,:min,:max
+  form do |f|
+    f.inputs do
+      f.input :analysis
+      f.input :element
+      f.input :min
+      f.input :max
 
+    end
+    f.actions
+  end
 
 end

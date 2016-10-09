@@ -12,6 +12,14 @@ ActiveAdmin.register Analysis do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-
+  permit_params :meteorite, :citation, :notes
+  form do |f|
+    f.inputs do
+      f.input :meteorite
+      f.input :citation, as: :select, fields: [:title,:authors]
+      f.input :notes
+    end
+    f.has_many :element_analisises
+    f.actions
+  end
 end

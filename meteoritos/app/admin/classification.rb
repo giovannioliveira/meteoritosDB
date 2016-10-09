@@ -12,6 +12,15 @@ ActiveAdmin.register Classification do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  permit_params :mtype,:mclassm,:mclan,:mgroup
+  form do |f|
+    f.inputs do
+      f.input :mtype
+      f.input :mclass
+      f.input :mclan
+      f.input :mgroup
 
-
+    end
+    f.actions
+  end
 end

@@ -13,5 +13,19 @@ ActiveAdmin.register Specimen do
 #   permitted
 # end
 
+  form do |f|
+    f.inputs do
+      f.input :meteorite
+      f.input :code
+      f.input :active
+      f.input :type_specimen
+      f.input :accession
+      f.input :initial_mass
+      f.input :description
+      f.input :notes
+
+    end
+    f.actions
+  end
 
 end

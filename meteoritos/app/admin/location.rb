@@ -12,6 +12,15 @@ ActiveAdmin.register Location do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  form do |f|
+    f.inputs do
+      f.input :country_code
+      f.input :name
+      f.input :latitude
+      f.input :longitude
 
+    end
+    f.actions
+  end
 
 end

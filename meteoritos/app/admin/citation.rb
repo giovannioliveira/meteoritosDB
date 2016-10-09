@@ -12,6 +12,17 @@ ActiveAdmin.register Citation do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  permit_params :ctype,:authors,:title,:year,:url,:notes
+  form do |f|
+    f.inputs do
+      f.input :ctype
+      f.input :authors
+      f.input :title
+      f.input :year
+      f.input :url
+      f.input :notes
 
-
+    end
+    f.actions
+  end
 end

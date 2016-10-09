@@ -15,13 +15,13 @@ ActiveAdmin.register Image do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :image_type
+      f.input :image_type, as: :tags
       f.input :meteorite
       f.input :specimen
       f.input :image, as: :file
       f.input :description
       f.input :citation
-      f.input :tags
+      f.input :tags, as: :tags
     end
     f.actions
   end
